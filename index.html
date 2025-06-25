@@ -277,13 +277,6 @@
       flex-direction: column;
       align-items: center;
       gap: 1.2rem;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 1s, transform 1s;
-    }
-    .section-card.visible {
-      opacity: 1;
-      transform: none;
     }
     .section-title {
       font-size: 2rem;
@@ -431,7 +424,7 @@
     </section>
 
     <section id="contact" class="contact-section">
-      <div class="section-card" id="contact-card">
+      <div class="section-card visible" id="contact-card">
         <div class="section-title"><i class="fa-solid fa-envelope"></i> Contact</div>
         <p>
           <strong>Email:</strong> <a href="mailto:navdeepparewa@gmail.com" style="color:#0073b1;font-weight:500;">navdeepparewa@gmail.com</a><br>
@@ -458,7 +451,7 @@
     function handleScrollFade() {
       fadeInOnView(document.getElementById('about-card'));
       fadeInOnView(document.getElementById('connect-card'));
-      fadeInOnView(document.getElementById('contact-card'));
+      // Contact card always visible, no animation
     }
     window.addEventListener('scroll', handleScrollFade);
     window.addEventListener('resize', handleScrollFade);
