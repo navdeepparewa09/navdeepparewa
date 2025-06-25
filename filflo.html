@@ -10,52 +10,71 @@
       font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: #e3f0ff;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #e3f0ff 0%, #f8fcff 50%, #e0e7ff 100%);
       color: #222;
+      box-sizing: border-box;
     }
     header {
-      background: #1F51FF;
+      background: rgba(31, 81, 255, 0.85);
       color: #fff;
-      padding: 1.5rem 0 1rem 0;
+      padding: 1.2rem 0 1.2rem 0;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 16px rgba(31,81,255,0.07);
     }
     nav {
       margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
     }
     nav a {
       color: #fff;
       text-decoration: none;
-      margin: 0 1.2rem;
-      font-weight: 500;
-      transition: color 0.2s;
+      font-weight: 600;
+      padding: 0.4rem 1.1rem;
+      border-radius: 2rem;
+      transition: background 0.2s, color 0.2s;
+      letter-spacing: 0.01em;
     }
     nav a:hover {
-      color: #ffd700;
+      background: #fff;
+      color: #1F51FF;
+      box-shadow: 0 2px 8px rgba(31,81,255,0.08);
     }
-    .filflo-container {
+    .filflo-card {
+      background: #fff;
+      border-radius: 2rem;
+      box-shadow: 0 4px 32px rgba(31,81,255,0.08);
+      padding: 3rem 2rem 2.5rem 2rem;
       max-width: 900px;
       margin: 3rem auto 2rem auto;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 2px 12px rgba(44,62,80,0.07);
-      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
       text-align: left;
     }
-    .filflo-container h1 {
+    .filflo-card h1 {
       margin-top: 0;
       font-size: 2.2rem;
       color: #1F51FF;
+      text-align: center;
     }
-    .filflo-container h2 {
+    .filflo-card h2 {
       color: #0073b1;
       margin-top: 2rem;
     }
-    .filflo-container ul {
+    .filflo-card ul {
       padding-left: 1.2rem;
       font-size: 1.08rem;
       color: #444;
     }
-    .filflo-container li {
+    .filflo-card li {
       margin-bottom: 0.5rem;
     }
     .customer-voice {
@@ -71,8 +90,10 @@
       background: #1F51FF;
       color: #fff;
       text-align: center;
-      padding: 1rem 0;
-      font-size: 0.95rem;
+      padding: 1.2rem 0 1.2rem 0;
+      font-size: 1rem;
+      position: static;
+      width: 100%;
       margin-top: 2rem;
     }
   </style>
@@ -89,7 +110,7 @@
     </nav>
   </header>
   <main>
-    <div class="filflo-container">
+    <div class="filflo-card">
       <h1>The All-in-One Fulfilment Partner for Brand Growth</h1>
       <p>
         <strong>FilFlo</strong> empowers your brand with an integrated platform that unifies order management, inventory, finance, and logistics—fueling scalable success. Purpose-built to address modern supply chain complexities, FilFlo is optimized for Quick Commerce, Retail, and Ecommerce. It unifies fragmented processes, provides real-time visibility, and integrates operations with finance, helping brands eliminate inefficiencies, improve inventory accuracy, and scale with agility in an ever-changing market.
