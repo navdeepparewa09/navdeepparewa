@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Navdeep Parewa | Home</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
     body {
       font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -75,23 +76,93 @@
       align-items: center;
       padding: 0 1rem;
       text-align: center;
-      background: rgba(234, 241, 248, 0.85);
+      background: linear-gradient(120deg, #e3f0ff 0%, #b6cfff 50%, #e0e7ff 100%);
       position: relative;
       z-index: 2;
       transition: background 0.3s;
       box-sizing: border-box;
+      overflow: hidden;
+    }
+    .hero-animated-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      z-index: 0;
+      pointer-events: none;
     }
     .hero-card {
-      background: #fff;
-      border-radius: 2rem;
-      box-shadow: 0 4px 32px rgba(31,81,255,0.08);
-      padding: 3rem 2rem 2.5rem 2rem;
-      max-width: 540px;
+      background: rgba(255,255,255,0.98);
+      border-radius: 2.5rem;
+      box-shadow: 0 8px 40px rgba(31,81,255,0.13), 0 2px 8px rgba(31,81,255,0.08);
+      padding: 3.5rem 2.5rem 2.8rem 2.5rem;
+      max-width: 600px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1.2rem;
+      gap: 1.5rem;
+      position: relative;
+      z-index: 1;
+      animation: fadeInUp 1.2s cubic-bezier(.23,1.01,.32,1) 0.2s both;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: none; }
+    }
+    .hero-headline {
+      font-size: 2.7rem;
+      font-weight: 800;
+      color: #1F51FF;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.01em;
+      line-height: 1.1;
+    }
+    .hero-tagline {
+      font-size: 1.25rem;
+      color: #444;
+      margin-bottom: 1.2rem;
+      font-weight: 500;
+      max-width: 500px;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: linear-gradient(90deg, #1F51FF 60%, #5a8fff 100%);
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 0.85rem 2.2rem;
+      border-radius: 2rem;
+      box-shadow: 0 2px 12px rgba(31,81,255,0.13);
+      text-decoration: none;
+      margin-bottom: 1.1rem;
+      transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+    .hero-cta:hover {
+      background: linear-gradient(90deg, #5a8fff 0%, #1F51FF 100%);
+      box-shadow: 0 4px 24px rgba(31,81,255,0.18);
+      transform: translateY(-2px) scale(1.04);
+    }
+    .hero-socials {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 0.5rem;
+      justify-content: center;
+    }
+    .hero-socials a {
+      color: #1F51FF;
+      background: #e3f0ff;
+      border-radius: 50%;
+      width: 44px; height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      box-shadow: 0 2px 8px rgba(31,81,255,0.07);
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+    .hero-socials a:hover {
+      background: #1F51FF;
+      color: #fff;
+      transform: scale(1.12);
     }
     .profile-img {
       width: 140px;
@@ -179,12 +250,9 @@
       transform: scale(1.05);
     }
     @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-      nav a {
-        margin: 0 0.5rem;
-      }
+      .hero-headline { font-size: 1.5rem; }
+      .hero-card { padding: 2rem 0.7rem 1.5rem 0.7rem; }
+      .hero-socials { gap: 1rem; }
     }
     .hero-name {
       font-weight: 700;
@@ -217,8 +285,19 @@
   <main>
     <section class="hero" id="hero-section">
       <div class="hero-card">
-        <h1 id="hero-title" class="hero-name">Welcome to My Website!</h1>
-        <div class="hero-subtitle">Co-Founder at Filflo | Brand Innovator | Tech Enthusiast</div>
+        <svg class="hero-animated-bg" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="700" cy="100" r="80" fill="#b6cfff" fill-opacity="0.18"/>
+          <circle cx="120" cy="500" r="60" fill="#1F51FF" fill-opacity="0.10"/>
+          <rect x="400" y="400" width="120" height="120" rx="60" fill="#ffd700" fill-opacity="0.10"/>
+        </svg>
+        <div class="hero-headline">Hi, I'm Navdeep Parewa</div>
+        <div class="hero-tagline">Co-Founder at Filflo | Brand Innovator | Tech Enthusiast<br>Empowering brands with data-driven growth and creative solutions.</div>
+        <a class="hero-cta" href="https://www.linkedin.com/in/navdeepparewa/" target="_blank"><i class="fab fa-linkedin"></i> Connect with Me</a>
+        <div class="hero-socials">
+          <a href="https://www.linkedin.com/in/navdeepparewa/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/navdeepparewa09" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:navdeepparewa@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
         <div style="color:#1a237e;font-size:1rem;font-weight:600;margin-bottom:0.5rem;">Gurugram, Haryana, India</div>
         <div style="color:#0d1333;font-size:1rem;font-weight:600;margin-bottom:0.5rem;">
           <span style="color:#0073b1;font-weight:600;">1,246 followers</span> &middot; <span style="color:#0073b1;font-weight:600;">500+ connections</span>
