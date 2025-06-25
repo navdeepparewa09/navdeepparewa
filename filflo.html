@@ -25,9 +25,28 @@
       z-index: 100;
       backdrop-filter: blur(8px);
       box-shadow: 0 2px 16px rgba(31,81,255,0.07);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .brand {
+      margin-bottom: 0.5rem;
+    }
+    .site-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: 0.02em;
+      color: #fff;
+    }
+    .site-tagline {
+      font-size: 0.9rem;
+      color: #ffd700;
+      margin: 0.15rem 0 0 0;
+      font-weight: 500;
     }
     nav {
-      margin-top: 1rem;
+      margin-top: 0.4rem;
       display: flex;
       justify-content: center;
       gap: 1.2rem;
@@ -100,7 +119,10 @@
 </head>
 <body>
   <header>
-    <h2>FilFlo</h2>
+    <div class="brand">
+      <h1 class="site-title">FilFlo</h1>
+      <div class="site-tagline">Your Fulfilment Partner</div>
+    </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
