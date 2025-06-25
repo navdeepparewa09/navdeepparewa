@@ -25,9 +25,28 @@
       z-index: 100;
       backdrop-filter: blur(8px);
       box-shadow: 0 2px 16px rgba(31,81,255,0.07);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .brand {
+      margin-bottom: 0.5rem;
+    }
+    .site-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: 0.02em;
+      color: #fff;
+    }
+    .site-tagline {
+      font-size: 0.9rem;
+      color: #ffd700;
+      margin: 0.15rem 0 0 0;
+      font-weight: 500;
     }
     nav {
-      margin-top: 1rem;
+      margin-top: 0.4rem;
       display: flex;
       justify-content: center;
       gap: 1.2rem;
@@ -180,17 +199,9 @@
 </head>
 <body>
   <header>
-    <div style="display: flex; align-items: center; justify-content: space-between; max-width: 900px; margin: 0 auto; padding: 1.5rem 1rem 0 1rem;">
-      <img src="profile.jpg" alt="Navdeep Parewa Profile" style="width:120px;height:120px;border-radius:50%;border:4px solid #fff;background:#e3f0ff;object-fit:cover;object-position:center;box-shadow:0 2px 8px rgba(0,0,0,0.08);margin-right:2rem;">
-      <div style="flex:1; text-align:left;">
-        <h2 style="margin: 0 0 0.2rem 0;">Navdeep Parewa <span style="font-size:1rem;vertical-align:middle;">&#10004;&#65039;</span></h2>
-        <div style="font-size:1.1rem;color:#ffd700;font-weight:500;margin-bottom:0.5rem;">Co-Founder at Filflo | Brand Innovator | Tech Enthusiast</div>
-        <div style="color:#1a237e;font-size:1rem;font-weight:600;margin-bottom:0.5rem;">Gurugram, Haryana, India</div>
-        <div style="color:#0d1333;font-size:1rem;font-weight:600;margin-bottom:0.5rem;">
-          <span style="color:#0073b1;font-weight:600;">1,246 followers</span> &middot; <span style="color:#0073b1;font-weight:600;">500+ connections</span>
-        </div>
-        <img src="filflo-logo.png" alt="FilFlo Logo" style="height:36px;margin-bottom:1rem;">
-      </div>
+    <div class="brand">
+      <h1 class="site-title">Navdeep Parewa</h1>
+      <div class="site-tagline">Founder &amp; Brand Innovator</div>
     </div>
     <nav>
       <a href="#">Home</a>
@@ -203,7 +214,7 @@
   <main>
     <section class="hero" id="hero-section">
       <div class="hero-card">
-        <h1 id="hero-title" class="hero-name">Navdeep Parewa</h1>
+        <h1 id="hero-title" class="hero-name">Welcome to My Website!</h1>
         <div class="hero-subtitle">Co-Founder at Filflo | Brand Innovator | Tech Enthusiast</div>
         <div style="color:#1a237e;font-size:1rem;font-weight:600;margin-bottom:0.5rem;">Gurugram, Haryana, India</div>
         <div style="color:#0d1333;font-size:1rem;font-weight:600;margin-bottom:0.5rem;">
