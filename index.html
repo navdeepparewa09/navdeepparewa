@@ -266,6 +266,89 @@
       text-align: center;
       max-width: 600px;
     }
+    .section-card {
+      background: #fff;
+      border-radius: 2rem;
+      box-shadow: 0 4px 32px rgba(31,81,255,0.08);
+      padding: 2.5rem 2rem 2.2rem 2rem;
+      max-width: 700px;
+      margin: 3rem auto 2rem auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s, transform 1s;
+    }
+    .section-card.visible {
+      opacity: 1;
+      transform: none;
+    }
+    .section-title {
+      font-size: 2rem;
+      color: #1F51FF;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    .section-title i {
+      font-size: 1.3em;
+      color: #ffd700;
+    }
+    .section-card p {
+      font-size: 1.08rem;
+      color: #444;
+      text-align: center;
+      margin: 0;
+    }
+    .features-row {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      margin: 2.5rem 0 0 0;
+      flex-wrap: wrap;
+    }
+    .feature-card {
+      background: #f8fcff;
+      border-radius: 1.2rem;
+      box-shadow: 0 2px 12px rgba(31,81,255,0.07);
+      padding: 2rem 1.3rem 1.5rem 1.3rem;
+      max-width: 220px;
+      min-width: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.7rem;
+      margin-bottom: 1.5rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .feature-card:hover {
+      transform: translateY(-6px) scale(1.04);
+      box-shadow: 0 6px 24px rgba(31,81,255,0.13);
+    }
+    .feature-icon {
+      font-size: 2.2rem;
+      color: #1F51FF;
+      margin-bottom: 0.3rem;
+    }
+    .feature-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1F51FF;
+      margin-bottom: 0.2rem;
+    }
+    .feature-desc {
+      font-size: 0.98rem;
+      color: #444;
+      text-align: center;
+    }
+    @media (max-width: 900px) {
+      .features-row { flex-direction: column; gap: 1.2rem; align-items: center; }
+      .feature-card { max-width: 100%; min-width: 0; width: 90vw; }
+    }
   </style>
 </head>
 <body>
@@ -306,28 +389,55 @@
     </section>
 
     <section id="about" class="about-section">
-      <h2>About Me</h2>
-      <p>
-        As a <strong>Co-Founder at Filflo</strong>, I specialize in brand innovation and technology-driven solutions. My journey blends creativity, precision, and a dash of passion—whether in the kitchen or the boardroom. I believe in the power of preparation, adaptability, and continuous learning to achieve success.
-      </p>
-      <p>
-        <em>"Every great chef started with a few burnt dishes, and every successful entrepreneur faced setbacks. Keep pushing, keep innovating, and most importantly, keep believing in your vision."</em>
-      </p>
+      <div class="section-card" id="about-card">
+        <div class="section-title"><i class="fa-solid fa-user"></i> About Me</div>
+        <p>
+          As a <strong>Co-Founder at Filflo</strong>, I specialize in brand innovation and technology-driven solutions. My journey blends creativity, precision, and a dash of passion—whether in the kitchen or the boardroom. I believe in the power of preparation, adaptability, and continuous learning to achieve success.
+        </p>
+        <p>
+          <em>"Every great chef started with a few burnt dishes, and every successful entrepreneur faced setbacks. Keep pushing, keep innovating, and most importantly, keep believing in your vision."</em>
+        </p>
+      </div>
+    </section>
+
+    <section id="features" class="features-section">
+      <div class="section-title" style="justify-content:center;"><i class="fa-solid fa-bolt"></i> What I Do</div>
+      <div class="features-row">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-lightbulb"></i></div>
+          <div class="feature-title">Brand Innovation</div>
+          <div class="feature-desc">Building creative, data-driven brands that stand out in the market and connect with audiences.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-gears"></i></div>
+          <div class="feature-title">Tech Solutions</div>
+          <div class="feature-desc">Leveraging technology to solve real business problems and drive operational excellence.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="feature-title">Growth Strategy</div>
+          <div class="feature-desc">Crafting and executing strategies for sustainable business growth and market expansion.</div>
+        </div>
+      </div>
     </section>
 
     <section id="connect" class="connect-section">
-      <h2>Let's Connect</h2>
-      <p>
-        I love connecting with fellow innovators, entrepreneurs, and tech enthusiasts. Feel free to reach out or follow me on <a href="https://www.linkedin.com/in/navdeepparewa/" target="_blank" style="color:#0073b1;font-weight:600;">LinkedIn</a>.
-      </p>
+      <div class="section-card" id="connect-card">
+        <div class="section-title"><i class="fa-solid fa-handshake"></i> Let's Connect</div>
+        <p>
+          I love connecting with fellow innovators, entrepreneurs, and tech enthusiasts. Feel free to reach out or follow me on <a href="https://www.linkedin.com/in/navdeepparewa/" target="_blank" style="color:#0073b1;font-weight:600;">LinkedIn</a>.
+        </p>
+      </div>
     </section>
 
     <section id="contact" class="contact-section">
-      <h2>Contact</h2>
-      <p>
-        <strong>Email:</strong> <a href="mailto:navdeepparewa@gmail.com" style="color:#0073b1;font-weight:500;">navdeepparewa@gmail.com</a><br>
-        <strong>Company:</strong> <a href="https://filflo.in" target="_blank" style="color:#0073b1;font-weight:500;">filflo.in</a>
-      </p>
+      <div class="section-card" id="contact-card">
+        <div class="section-title"><i class="fa-solid fa-envelope"></i> Contact</div>
+        <p>
+          <strong>Email:</strong> <a href="mailto:navdeepparewa@gmail.com" style="color:#0073b1;font-weight:500;">navdeepparewa@gmail.com</a><br>
+          <strong>Company:</strong> <a href="https://filflo.in" target="_blank" style="color:#0073b1;font-weight:500;">filflo.in</a>
+        </p>
+      </div>
     </section>
 
     <!-- Additional sections like About, Projects, Contact can be added here -->
@@ -337,36 +447,28 @@
   </footer>
   <script>
     window.addEventListener('scroll', function() {
-      const hero = document.getElementById('hero-section');
-      const heroTitle = document.getElementById('hero-title');
-      const about = document.getElementById('about');
-      const connect = document.getElementById('connect');
-      const contact = document.getElementById('contact');
-      
-      const scrollY = window.scrollY;
+      const aboutCard = document.getElementById('about-card');
+      const connectCard = document.getElementById('connect-card');
+      const contactCard = document.getElementById('contact-card');
       const windowH = window.innerHeight;
-      // Hero animation
-      let heroScale = 1 + Math.min(scrollY / (windowH * 0.7), 1) * 1.2;
-      let heroOpacity = 1 - Math.min(scrollY / (windowH * 0.7), 1);
-      heroTitle.style.fontSize = (2.5 * heroScale) + 'rem';
-      heroTitle.style.opacity = heroOpacity;
+      const scrollY = window.scrollY;
       // About section animation
       if (scrollY > windowH * 0.5 && scrollY < windowH * 1.5) {
-        about.classList.add('visible');
+        aboutCard.classList.add('visible');
       } else {
-        about.classList.remove('visible');
+        aboutCard.classList.remove('visible');
       }
       // Connect section animation
       if (scrollY > windowH * 1.5 && scrollY < windowH * 2.5) {
-        connect.classList.add('visible');
+        connectCard.classList.add('visible');
       } else {
-        connect.classList.remove('visible');
+        connectCard.classList.remove('visible');
       }
       // Contact section animation
       if (scrollY > windowH * 2.5) {
-        contact.classList.add('visible');
+        contactCard.classList.add('visible');
       } else {
-        contact.classList.remove('visible');
+        contactCard.classList.remove('visible');
       }
     });
   </script>
