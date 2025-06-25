@@ -446,31 +446,23 @@
     &copy; 2024 Navdeep Parewa. All rights reserved.
   </footer>
   <script>
-    window.addEventListener('scroll', function() {
-      const aboutCard = document.getElementById('about-card');
-      const connectCard = document.getElementById('connect-card');
-      const contactCard = document.getElementById('contact-card');
+    function fadeInOnView(element) {
+      const rect = element.getBoundingClientRect();
       const windowH = window.innerHeight;
-      const scrollY = window.scrollY;
-      // About section animation
-      if (scrollY > windowH * 0.5 && scrollY < windowH * 1.5) {
-        aboutCard.classList.add('visible');
+      if (rect.top < windowH * 0.85 && rect.bottom > windowH * 0.15) {
+        element.classList.add('visible');
       } else {
-        aboutCard.classList.remove('visible');
+        element.classList.remove('visible');
       }
-      // Connect section animation
-      if (scrollY > windowH * 1.5 && scrollY < windowH * 2.5) {
-        connectCard.classList.add('visible');
-      } else {
-        connectCard.classList.remove('visible');
-      }
-      // Contact section animation
-      if (scrollY > windowH * 2.5) {
-        contactCard.classList.add('visible');
-      } else {
-        contactCard.classList.remove('visible');
-      }
-    });
+    }
+    function handleScrollFade() {
+      fadeInOnView(document.getElementById('about-card'));
+      fadeInOnView(document.getElementById('connect-card'));
+      fadeInOnView(document.getElementById('contact-card'));
+    }
+    window.addEventListener('scroll', handleScrollFade);
+    window.addEventListener('resize', handleScrollFade);
+    window.addEventListener('DOMContentLoaded', handleScrollFade);
   </script>
 </body>
 </html> 
