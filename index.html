@@ -71,12 +71,45 @@
       bottom: 0;
       font-size: 0.95rem;
     }
-    .about-fade {
+    .about-section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 1rem;
+      text-align: center;
+      background: #fff;
+      position: relative;
+      z-index: 1;
       opacity: 0;
-      transition: opacity 0.5s;
+      transform: scale(0.9);
+      transition: opacity 0.5s, transform 0.5s;
+      box-sizing: border-box;
     }
-    .about-fade.visible {
+    .about-section.visible {
       opacity: 1;
+      transform: scale(1.1);
+    }
+    .connect-section, .contact-section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 1rem;
+      text-align: center;
+      background: #f7f9fb;
+      position: relative;
+      z-index: 0;
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 0.5s, transform 0.5s;
+      box-sizing: border-box;
+    }
+    .connect-section.visible, .contact-section.visible {
+      opacity: 1;
+      transform: scale(1.05);
     }
     @media (max-width: 600px) {
       .hero h1 {
@@ -120,7 +153,7 @@
 
     <div style="height: 10vh;"></div>
 
-    <section id="about" class="about-fade" style="padding:2rem 1rem;max-width:700px;margin:0 auto;">
+    <section id="about" class="about-section">
       <h2>About Me</h2>
       <p>
         As a <strong>Co-Founder at Filflo</strong>, I specialize in brand innovation and technology-driven solutions. My journey blends creativity, precision, and a dash of passion—whether in the kitchen or the boardroom. I believe in the power of preparation, adaptability, and continuous learning to achieve success.
@@ -130,14 +163,14 @@
       </p>
     </section>
 
-    <section id="connect" style="padding:2rem 1rem;max-width:700px;margin:0 auto;">
+    <section id="connect" class="connect-section">
       <h2>Let's Connect</h2>
       <p>
         I love connecting with fellow innovators, entrepreneurs, and tech enthusiasts. Feel free to reach out or follow me on <a href="https://www.linkedin.com/in/navdeepparewa/" target="_blank" style="color:#0073b1;font-weight:600;">LinkedIn</a>.
       </p>
     </section>
 
-    <section id="contact" style="padding:2rem 1rem;max-width:700px;margin:0 auto;">
+    <section id="contact" class="contact-section">
       <h2>Contact</h2>
       <p>
         <strong>Email:</strong> <a href="mailto:navdeepparewa@gmail.com" style="color:#0073b1;font-weight:500;">navdeepparewa@gmail.com</a><br>
@@ -155,18 +188,32 @@
       const hero = document.getElementById('hero-section');
       const heroTitle = document.getElementById('hero-title');
       const about = document.getElementById('about');
+      const connect = document.getElementById('connect');
+      const contact = document.getElementById('contact');
       const scrollY = window.scrollY;
       const windowH = window.innerHeight;
-      // Calculate how much to scale and fade the hero title
-      let scale = 1 + Math.min(scrollY / (windowH * 0.7), 1) * 1.2; // up to 2.2x
-      let opacity = 1 - Math.min(scrollY / (windowH * 0.7), 1);
-      heroTitle.style.fontSize = (2.5 * scale) + 'rem';
-      heroTitle.style.opacity = opacity;
-      // Fade in About section
-      if (scrollY > windowH * 0.5) {
+      // Hero animation
+      let heroScale = 1 + Math.min(scrollY / (windowH * 0.7), 1) * 1.2;
+      let heroOpacity = 1 - Math.min(scrollY / (windowH * 0.7), 1);
+      heroTitle.style.fontSize = (2.5 * heroScale) + 'rem';
+      heroTitle.style.opacity = heroOpacity;
+      // About section animation
+      if (scrollY > windowH * 0.5 && scrollY < windowH * 1.5) {
         about.classList.add('visible');
       } else {
         about.classList.remove('visible');
+      }
+      // Connect section animation
+      if (scrollY > windowH * 1.5 && scrollY < windowH * 2.5) {
+        connect.classList.add('visible');
+      } else {
+        connect.classList.remove('visible');
+      }
+      // Contact section animation
+      if (scrollY > windowH * 2.5) {
+        contact.classList.add('visible');
+      } else {
+        contact.classList.remove('visible');
       }
     });
   </script>
