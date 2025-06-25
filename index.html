@@ -10,27 +10,41 @@
       font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: #e3f0ff;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #e3f0ff 0%, #f8fcff 50%, #e0e7ff 100%);
       color: #222;
+      box-sizing: border-box;
     }
     header {
-      background: #1F51FF;
+      background: rgba(31, 81, 255, 0.85);
       color: #fff;
-      padding: 1.5rem 0;
+      padding: 1.2rem 0 1.2rem 0;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 16px rgba(31,81,255,0.07);
     }
     nav {
       margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
     }
     nav a {
       color: #fff;
       text-decoration: none;
-      margin: 0 1.2rem;
-      font-weight: 500;
-      transition: color 0.2s;
+      font-weight: 600;
+      padding: 0.4rem 1.1rem;
+      border-radius: 2rem;
+      transition: background 0.2s, color 0.2s;
+      letter-spacing: 0.01em;
     }
     nav a:hover {
-      color: #ffd700;
+      background: #fff;
+      color: #1F51FF;
+      box-shadow: 0 2px 8px rgba(31,81,255,0.08);
     }
     .hero {
       min-height: 100vh;
@@ -40,11 +54,34 @@
       align-items: center;
       padding: 0 1rem;
       text-align: center;
-      background: #eaf1f8;
+      background: rgba(234, 241, 248, 0.85);
       position: relative;
       z-index: 2;
       transition: background 0.3s;
       box-sizing: border-box;
+    }
+    .hero-card {
+      background: #fff;
+      border-radius: 2rem;
+      box-shadow: 0 4px 32px rgba(31,81,255,0.08);
+      padding: 3rem 2rem 2.5rem 2rem;
+      max-width: 540px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+    }
+    .profile-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      object-fit: cover;
+      object-position: center;
+      box-shadow: 0 4px 24px rgba(31,81,255,0.13);
+      margin-bottom: 0.5rem;
+      background: #e3f0ff;
     }
     .hero h1 {
       font-size: 2.5rem;
@@ -65,11 +102,11 @@
       background: #1F51FF;
       color: #fff;
       text-align: center;
-      padding: 1rem 0;
-      position: fixed;
+      padding: 1.2rem 0 1.2rem 0;
+      font-size: 1rem;
+      position: static;
       width: 100%;
-      bottom: 0;
-      font-size: 0.95rem;
+      margin-top: 2rem;
     }
     .about-section {
       min-height: 100vh;
@@ -79,7 +116,7 @@
       align-items: center;
       padding: 0 1rem;
       text-align: center;
-      background: #fff;
+      background: rgba(255,255,255,0.97);
       position: relative;
       z-index: 1;
       opacity: 0;
@@ -107,7 +144,7 @@
       align-items: center;
       padding: 0 1rem;
       text-align: center;
-      background: #f7f9fb;
+      background: rgba(247,249,251,0.97);
       position: relative;
       z-index: 0;
       opacity: 0;
@@ -153,10 +190,17 @@
   </header>
   <main>
     <section class="hero" id="hero-section">
-      <h1 id="hero-title">Welcome to My Website!</h1>
-      <p>
-        Hi, I'm Navdeep Parewa, Co-Founder at Filflo, Brand Innovator, and Tech Enthusiast based in Gurugram, Haryana, India. Connect with me to explore my projects, ideas, and professional journey!
-      </p>
+      <div class="hero-card">
+        <img src="profile.jpg" alt="Navdeep Parewa Profile" class="profile-img">
+        <h1 id="hero-title">Welcome to My Website!</h1>
+        <p>
+          Hi, I'm Navdeep Parewa, Co-Founder at Filflo, Brand Innovator, and Tech Enthusiast based in Gurugram, Haryana, India. Connect with me to explore my projects, ideas, and professional journey!
+        </p>
+        <div style="color:#1a237e;font-size:1rem;font-weight:600;margin-bottom:0.5rem;">Gurugram, Haryana, India</div>
+        <div style="color:#0d1333;font-size:1rem;font-weight:600;margin-bottom:0.5rem;">
+          <span style="color:#0073b1;font-weight:600;">1,246 followers</span> &middot; <span style="color:#0073b1;font-weight:600;">500+ connections</span>
+        </div>
+      </div>
     </section>
 
     <section id="about" class="about-section">
