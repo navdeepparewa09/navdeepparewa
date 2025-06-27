@@ -106,6 +106,67 @@
         padding: 1.5rem 0.5rem;
       }
     }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.2rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .about-mission-row {
+      display: flex;
+      flex-direction: row;
+      gap: 2.5rem;
+      max-width: 900px;
+      margin: 2.5rem auto 2.5rem auto;
+      background: #fff;
+      border-radius: 2rem;
+      box-shadow: 0 4px 32px rgba(31,81,255,0.08);
+      padding: 2.5rem 2rem;
+      align-items: flex-start;
+    }
+    .about-bio, .about-mission {
+      flex: 1 1 0;
+      min-width: 0;
+    }
+    .about-bio {
+      font-size: 1.08rem;
+      color: #444;
+      text-align: left;
+      max-width: 380px;
+    }
+    .about-mission {
+      font-size: 1.08rem;
+      color: #1F51FF;
+      text-align: left;
+      max-width: 380px;
+    }
+    .about-mission-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #1F51FF;
+      margin-bottom: 0.5rem;
+    }
+    .about-mission-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .about-mission-list li {
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+    }
+    .about-mission-list i {
+      color: #ffd700;
+      font-size: 1.1em;
+      margin-top: 0.1em;
+    }
+    @media (max-width: 900px) {
+      .about-mission-row { flex-direction: column; gap: 1.2rem; align-items: center; padding: 1.5rem 0.7rem; }
+      .about-bio, .about-mission { text-align: center; max-width: 100%; }
+    }
   </style>
 </head>
 <body>
@@ -122,14 +183,26 @@
       <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
     </nav>
   </header>
-  <main>
-    <div class="about-card">
-      <h1>About Me</h1>
-      <p>
-        As a <strong>Co-Founder at Filflo</strong>, I specialize in brand innovation and technology-driven solutions. My journey blends creativity, precision, and a dash of passion—whether in the kitchen or the boardroom. I believe in the power of preparation, adaptability, and continuous learning to achieve success.<br><br>
-        <em>"Every great chef started with a few burnt dishes, and every successful entrepreneur faced setbacks. Keep pushing, keep innovating, and most importantly, keep believing in your vision."</em><br><br>
-        I am passionate about leveraging data insights and innovation to drive business growth and create impactful brands. Based in Gurugram, Haryana, India, I love connecting with fellow innovators, entrepreneurs, and tech enthusiasts.
-      </p>
+  <main class="container">
+    <div class="about-mission-row">
+      <div class="about-bio">
+        <div class="section-title"><i class="fa-solid fa-user"></i> About Me</div>
+        <p>
+          As a <strong>Co-Founder at Filflo</strong>, I specialize in brand innovation and technology-driven solutions. My journey blends creativity, precision, and a dash of passion—whether in the kitchen or the boardroom. I believe in the power of preparation, adaptability, and continuous learning to achieve success.
+        </p>
+        <p>
+          <em>"Every great chef started with a few burnt dishes, and every successful entrepreneur faced setbacks. Keep pushing, keep innovating, and most importantly, keep believing in your vision."</em>
+        </p>
+      </div>
+      <div class="about-mission">
+        <div class="about-mission-title"><i class="fa-solid fa-bullseye"></i> My Mission</div>
+        <ul class="about-mission-list">
+          <li><i class="fa-solid fa-lightbulb"></i> Drive innovation and creativity in every project I lead.</li>
+          <li><i class="fa-solid fa-people-group"></i> Build and empower high-performing teams.</li>
+          <li><i class="fa-solid fa-chart-line"></i> Deliver measurable growth and impact for brands.</li>
+          <li><i class="fa-solid fa-heart"></i> Foster a culture of integrity, learning, and passion.</li>
+        </ul>
+      </div>
     </div>
   </main>
   <footer>

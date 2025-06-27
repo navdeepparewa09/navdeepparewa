@@ -68,6 +68,13 @@
       color: #1F51FF;
       box-shadow: 0 2px 8px rgba(31,81,255,0.08);
     }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.2rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
     .filflo-card {
       background: #fff;
       border-radius: 2rem;
@@ -79,22 +86,35 @@
       flex-direction: column;
       align-items: center;
       gap: 1.2rem;
-      text-align: left;
-    }
-    .filflo-card h1 {
-      margin-top: 0;
-      font-size: 2.2rem;
-      color: #1F51FF;
       text-align: center;
+    }
+    .section-title {
+      font-size: 2rem;
+      color: #1F51FF;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      justify-content: center;
+      text-align: center;
+    }
+    .section-title i {
+      font-size: 1.3em;
+      color: #ffd700;
     }
     .filflo-card h2 {
       color: #0073b1;
-      margin-top: 2rem;
+      font-size: 1.3rem;
+      margin-bottom: 0.2rem;
     }
     .filflo-card ul {
       padding-left: 1.2rem;
       font-size: 1.08rem;
       color: #444;
+      text-align: left;
+      margin: 0 auto 1.2rem auto;
+      max-width: 700px;
     }
     .filflo-card li {
       margin-bottom: 0.5rem;
@@ -107,6 +127,10 @@
       font-style: italic;
       color: #333;
       border-radius: 8px;
+      text-align: left;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
     footer {
       background: #1F51FF;
@@ -117,6 +141,10 @@
       position: static;
       width: 100%;
       margin-top: 2rem;
+    }
+    @media (max-width: 900px) {
+      .filflo-card { padding: 1.5rem 0.7rem; }
+      .filflo-card ul, .customer-voice { max-width: 100%; }
     }
   </style>
 </head>
@@ -134,8 +162,9 @@
       <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
     </nav>
   </header>
-  <main>
+  <main class="container">
     <div class="filflo-card">
+      <div class="section-title"><i class="fa-solid fa-building"></i> FilFlo</div>
       <h1>The All-in-One Fulfilment Partner for Brand Growth</h1>
       <p>
         <strong>FilFlo</strong> empowers your brand with an integrated platform that unifies order management, inventory, finance, and logistics—fueling scalable success. Purpose-built to address modern supply chain complexities, FilFlo is optimized for Quick Commerce, Retail, and Ecommerce. It unifies fragmented processes, provides real-time visibility, and integrates operations with finance, helping brands eliminate inefficiencies, improve inventory accuracy, and scale with agility in an ever-changing market.
