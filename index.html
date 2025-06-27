@@ -640,6 +640,82 @@
       box-shadow: 0 4px 24px rgba(31,81,255,0.18);
       transform: translateY(-2px) scale(1.04);
     }
+    .contact-card-ui {
+      background: linear-gradient(120deg, #1F51FF 80%, #5a8fff 100%);
+      color: #fff;
+      border-radius: 2rem;
+      box-shadow: 0 4px 32px rgba(31,81,255,0.13);
+      max-width: 700px;
+      margin: 2.5rem auto 2.5rem auto;
+      padding: 2.5rem 2rem 2.2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+      text-align: center;
+    }
+    .contact-card-ui .contact-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.7rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      justify-content: center;
+    }
+    .contact-card-ui .contact-title i {
+      font-size: 1.3em;
+      color: #ffd700;
+    }
+    .contact-card-ui .contact-message {
+      font-size: 1.12rem;
+      color: #e3f0ff;
+      margin-bottom: 1.2rem;
+      font-weight: 500;
+    }
+    .contact-card-ui .contact-socials {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      margin-bottom: 1.1rem;
+    }
+    .contact-card-ui .contact-socials a {
+      color: #1F51FF;
+      background: #fff;
+      border-radius: 50%;
+      width: 44px; height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      box-shadow: 0 2px 8px rgba(31,81,255,0.07);
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+    .contact-card-ui .contact-socials a:hover {
+      background: #ffd700;
+      color: #1F51FF;
+      transform: scale(1.12);
+    }
+    .contact-card-ui .contact-cta {
+      display: inline-block;
+      background: #ffd700;
+      color: #1F51FF;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 0.85rem 2.2rem;
+      border-radius: 2rem;
+      box-shadow: 0 2px 12px rgba(31,81,255,0.13);
+      text-decoration: none;
+      margin-bottom: 0.2rem;
+      transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+    .contact-card-ui .contact-cta:hover {
+      background: #fff;
+      color: #1F51FF;
+      box-shadow: 0 4px 24px rgba(31,81,255,0.18);
+      transform: translateY(-2px) scale(1.04);
+    }
   </style>
 </head>
 <body>
@@ -752,12 +828,20 @@
     <svg class="wave-divider" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h1440v30c-120 20-360 40-720 40S120 50 0 30V0z" fill="#f8fcff"/></svg>
 
     <section id="contact" class="contact-section">
-      <div class="section-card visible" id="contact-card">
-        <div class="section-title"><i class="fa-solid fa-envelope"></i> Contact</div>
-        <p>
-          <strong>Email:</strong> <a href="mailto:navdeepparewa@gmail.com" style="color:#0073b1;font-weight:500;">navdeepparewa@gmail.com</a><br>
-          <strong>Company:</strong> <a href="https://filflo.in" target="_blank" style="color:#0073b1;font-weight:500;">filflo.in</a>
-        </p>
+      <div class="contact-card-ui" id="contact-card">
+        <div class="contact-title"><i class="fa-solid fa-envelope"></i> Contact</div>
+        <div class="contact-message">
+          Want to collaborate, chat, or have a question? Drop me a line or connect on your favorite platform!
+        </div>
+        <div class="contact-socials">
+          <a href="https://www.linkedin.com/in/navdeepparewa/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/navdeepparewa09" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:navdeepparewa@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <a class="contact-cta" href="mailto:navdeepparewa@gmail.com">Email navdeepparewa@gmail.com</a>
+        <div style="color:#e3f0ff;font-size:1rem;font-weight:500;margin-top:0.7rem;">
+          <span>Company:</span> <a href="https://filflo.in" target="_blank" style="color:#ffd700;font-weight:600;">filflo.in</a>
+        </div>
       </div>
     </section>
     <svg class="wave-divider" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h1440v30c-120 20-360 40-720 40S120 50 0 30V0z" fill="#f8fcff"/></svg>
