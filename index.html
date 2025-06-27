@@ -355,6 +355,162 @@
       width: 100%;
       box-sizing: border-box;
     }
+    .founder-hero {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(120deg, #e3f0ff 0%, #b6cfff 50%, #e0e7ff 100%);
+      border-radius: 2.5rem;
+      box-shadow: 0 8px 40px rgba(31,81,255,0.13), 0 2px 8px rgba(31,81,255,0.08);
+      padding: 3.5rem 2.5rem 2.8rem 2.5rem;
+      max-width: 900px;
+      margin: 2.5rem auto 2.5rem auto;
+      position: relative;
+      z-index: 1;
+      gap: 2.5rem;
+    }
+    .founder-hero-left {
+      flex: 1 1 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      min-width: 0;
+    }
+    .founder-hero-name {
+      font-size: 2.7rem;
+      font-weight: 800;
+      color: #1F51FF;
+      margin-bottom: 0.2rem;
+      letter-spacing: 0.01em;
+      line-height: 1.1;
+    }
+    .founder-hero-role {
+      font-size: 1.2rem;
+      color: #ffd700;
+      font-weight: 600;
+      margin-bottom: 0.7rem;
+    }
+    .founder-hero-tagline {
+      font-size: 1.15rem;
+      color: #444;
+      margin-bottom: 1.2rem;
+      font-weight: 500;
+      max-width: 400px;
+    }
+    .founder-hero-cta {
+      display: inline-block;
+      background: linear-gradient(90deg, #1F51FF 60%, #5a8fff 100%);
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 0.85rem 2.2rem;
+      border-radius: 2rem;
+      box-shadow: 0 2px 12px rgba(31,81,255,0.13);
+      text-decoration: none;
+      margin-bottom: 1.1rem;
+      transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+    .founder-hero-cta:hover {
+      background: linear-gradient(90deg, #5a8fff 0%, #1F51FF 100%);
+      box-shadow: 0 4px 24px rgba(31,81,255,0.18);
+      transform: translateY(-2px) scale(1.04);
+    }
+    .founder-hero-socials {
+      display: flex;
+      gap: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    .founder-hero-socials a {
+      color: #1F51FF;
+      background: #e3f0ff;
+      border-radius: 50%;
+      width: 40px; height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 0 2px 8px rgba(31,81,255,0.07);
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+    .founder-hero-socials a:hover {
+      background: #1F51FF;
+      color: #fff;
+      transform: scale(1.12);
+    }
+    .founder-hero-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 6px solid #fff;
+      object-fit: cover;
+      object-position: center;
+      box-shadow: 0 4px 24px rgba(31,81,255,0.13);
+      background: #e3f0ff;
+      margin-left: 1.5rem;
+      margin-right: 0;
+      flex-shrink: 0;
+    }
+    @media (max-width: 900px) {
+      .founder-hero { flex-direction: column; align-items: center; gap: 1.5rem; padding: 2rem 1rem; }
+      .founder-hero-img { margin: 0 0 1.2rem 0; }
+      .founder-hero-left { align-items: center; text-align: center; }
+    }
+    .about-mission-row {
+      display: flex;
+      flex-direction: row;
+      gap: 2.5rem;
+      max-width: 900px;
+      margin: 2.5rem auto 2.5rem auto;
+      background: #fff;
+      border-radius: 2rem;
+      box-shadow: 0 4px 32px rgba(31,81,255,0.08);
+      padding: 2.5rem 2rem;
+      align-items: flex-start;
+    }
+    .about-bio, .about-mission {
+      flex: 1 1 0;
+      min-width: 0;
+    }
+    .about-bio {
+      font-size: 1.08rem;
+      color: #444;
+      text-align: left;
+      max-width: 380px;
+    }
+    .about-mission {
+      font-size: 1.08rem;
+      color: #1F51FF;
+      text-align: left;
+      max-width: 380px;
+    }
+    .about-mission-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #1F51FF;
+      margin-bottom: 0.5rem;
+    }
+    .about-mission-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .about-mission-list li {
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+    }
+    .about-mission-list i {
+      color: #ffd700;
+      font-size: 1.1em;
+      margin-top: 0.1em;
+    }
+    @media (max-width: 900px) {
+      .about-mission-row { flex-direction: column; gap: 1.2rem; align-items: center; padding: 1.5rem 0.7rem; }
+      .about-bio, .about-mission { text-align: center; max-width: 100%; }
+    }
   </style>
 </head>
 <body>
@@ -373,41 +529,51 @@
   </header>
   <main class="container">
     <section class="hero" id="hero-section">
-      <div class="hero-card">
-        <svg class="hero-animated-bg" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="700" cy="100" r="80" fill="#b6cfff" fill-opacity="0.18"/>
-          <circle cx="120" cy="500" r="60" fill="#1F51FF" fill-opacity="0.10"/>
-          <rect x="400" y="400" width="120" height="120" rx="60" fill="#ffd700" fill-opacity="0.10"/>
-        </svg>
-        <div class="hero-headline">Hi, I'm Navdeep Parewa</div>
-        <div class="hero-tagline">Co-Founder at Filflo | Brand Innovator | Tech Enthusiast<br>Empowering brands with data-driven growth and creative solutions.</div>
-        <a class="hero-cta" href="https://www.linkedin.com/in/navdeepparewa/" target="_blank"><i class="fab fa-linkedin"></i> Connect with Me</a>
-        <div class="hero-socials">
-          <a href="https://www.linkedin.com/in/navdeepparewa/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/navdeepparewa09" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-          <a href="mailto:navdeepparewa@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      <div class="founder-hero">
+        <div class="founder-hero-left">
+          <div class="founder-hero-name">Navdeep Parewa</div>
+          <div class="founder-hero-role">Co-Founder at Filflo</div>
+          <div class="founder-hero-tagline">Empowering brands with data-driven growth, creative solutions, and a passion for innovation.</div>
+          <a class="founder-hero-cta" href="https://www.linkedin.com/in/navdeepparewa/" target="_blank"><i class="fab fa-linkedin"></i> Connect with Me</a>
+          <div class="founder-hero-socials">
+            <a href="https://www.linkedin.com/in/navdeepparewa/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/navdeepparewa09" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:navdeepparewa@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+          <div style="color:#1a237e;font-size:1rem;font-weight:600;margin-top:1.2rem;">Gurugram, Haryana, India</div>
+          <div style="color:#0d1333;font-size:1rem;font-weight:600;margin-bottom:0.5rem;">
+            <span style="color:#0073b1;font-weight:600;">1,246 followers</span> &middot; <span style="color:#0073b1;font-weight:600;">500+ connections</span>
+          </div>
         </div>
-        <div style="color:#1a237e;font-size:1rem;font-weight:600;margin-bottom:0.5rem;">Gurugram, Haryana, India</div>
-        <div style="color:#0d1333;font-size:1rem;font-weight:600;margin-bottom:0.5rem;">
-          <span style="color:#0073b1;font-weight:600;">1,246 followers</span> &middot; <span style="color:#0073b1;font-weight:600;">500+ connections</span>
-        </div>
-        <div class="scroll-indicator">
-          <span>Scroll Down</span>
-          <i class="fa-solid fa-angles-down"></i>
-        </div>
+        <img class="founder-hero-img" src="https://avatars.githubusercontent.com/u/9919?v=4" alt="Navdeep Parewa Profile" />
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll Down</span>
+        <i class="fa-solid fa-angles-down"></i>
       </div>
     </section>
     <svg class="wave-divider" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h1440v30c-120 20-360 40-720 40S120 50 0 30V0z" fill="#f8fcff"/></svg>
 
     <section id="about" class="about-section">
-      <div class="section-card" id="about-card">
-        <div class="section-title"><i class="fa-solid fa-user"></i> About Me</div>
-        <p>
-          As a <strong>Co-Founder at Filflo</strong>, I specialize in brand innovation and technology-driven solutions. My journey blends creativity, precision, and a dash of passion—whether in the kitchen or the boardroom. I believe in the power of preparation, adaptability, and continuous learning to achieve success.
-        </p>
-        <p>
-          <em>"Every great chef started with a few burnt dishes, and every successful entrepreneur faced setbacks. Keep pushing, keep innovating, and most importantly, keep believing in your vision."</em>
-        </p>
+      <div class="about-mission-row">
+        <div class="about-bio">
+          <div class="section-title"><i class="fa-solid fa-user"></i> About Me</div>
+          <p>
+            As a <strong>Co-Founder at Filflo</strong>, I specialize in brand innovation and technology-driven solutions. My journey blends creativity, precision, and a dash of passion—whether in the kitchen or the boardroom. I believe in the power of preparation, adaptability, and continuous learning to achieve success.
+          </p>
+          <p>
+            <em>"Every great chef started with a few burnt dishes, and every successful entrepreneur faced setbacks. Keep pushing, keep innovating, and most importantly, keep believing in your vision."</em>
+          </p>
+        </div>
+        <div class="about-mission">
+          <div class="about-mission-title"><i class="fa-solid fa-bullseye"></i> My Mission</div>
+          <ul class="about-mission-list">
+            <li><i class="fa-solid fa-lightbulb"></i> Drive innovation and creativity in every project I lead.</li>
+            <li><i class="fa-solid fa-people-group"></i> Build and empower high-performing teams.</li>
+            <li><i class="fa-solid fa-chart-line"></i> Deliver measurable growth and impact for brands.</li>
+            <li><i class="fa-solid fa-heart"></i> Foster a culture of integrity, learning, and passion.</li>
+          </ul>
+        </div>
       </div>
     </section>
     <svg class="wave-divider" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h1440v30c-120 20-360 40-720 40S120 50 0 30V0z" fill="#e3f0ff"/></svg>
