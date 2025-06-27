@@ -511,6 +511,135 @@
       .about-mission-row { flex-direction: column; gap: 1.2rem; align-items: center; padding: 1.5rem 0.7rem; }
       .about-bio, .about-mission { text-align: center; max-width: 100%; }
     }
+    .what-i-do-row {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      max-width: 900px;
+      margin: 2.5rem auto 2.5rem auto;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .what-i-do-card {
+      background: #fff;
+      border-radius: 1.5rem;
+      box-shadow: 0 4px 24px rgba(31,81,255,0.10);
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 1.2rem;
+      padding: 2rem 1.5rem 2rem 1.2rem;
+      min-width: 260px;
+      max-width: 320px;
+      flex: 1 1 0;
+      border-left: 6px solid #1F51FF;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .what-i-do-card:hover {
+      box-shadow: 0 8px 32px rgba(31,81,255,0.18);
+      transform: translateY(-4px) scale(1.03);
+    }
+    .what-i-do-icon {
+      font-size: 2rem;
+      color: #1F51FF;
+      margin-top: 0.2rem;
+      flex-shrink: 0;
+    }
+    .what-i-do-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .what-i-do-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1F51FF;
+      margin-bottom: 0.1rem;
+    }
+    .what-i-do-desc {
+      font-size: 1rem;
+      color: #444;
+    }
+    @media (max-width: 900px) {
+      .what-i-do-row { flex-direction: column; gap: 1.2rem; align-items: center; }
+      .what-i-do-card { max-width: 100%; min-width: 0; width: 95vw; }
+    }
+    .connect-card {
+      background: linear-gradient(120deg, #1F51FF 80%, #5a8fff 100%);
+      color: #fff;
+      border-radius: 2rem;
+      box-shadow: 0 4px 32px rgba(31,81,255,0.13);
+      max-width: 700px;
+      margin: 2.5rem auto 2.5rem auto;
+      padding: 2.5rem 2rem 2.2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+      text-align: center;
+    }
+    .connect-card .connect-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.7rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      justify-content: center;
+    }
+    .connect-card .connect-title i {
+      font-size: 1.3em;
+      color: #ffd700;
+    }
+    .connect-card .connect-message {
+      font-size: 1.12rem;
+      color: #e3f0ff;
+      margin-bottom: 1.2rem;
+      font-weight: 500;
+    }
+    .connect-card .connect-socials {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      margin-bottom: 1.1rem;
+    }
+    .connect-card .connect-socials a {
+      color: #1F51FF;
+      background: #fff;
+      border-radius: 50%;
+      width: 44px; height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      box-shadow: 0 2px 8px rgba(31,81,255,0.07);
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+    .connect-card .connect-socials a:hover {
+      background: #ffd700;
+      color: #1F51FF;
+      transform: scale(1.12);
+    }
+    .connect-card .connect-cta {
+      display: inline-block;
+      background: #ffd700;
+      color: #1F51FF;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 0.85rem 2.2rem;
+      border-radius: 2rem;
+      box-shadow: 0 2px 12px rgba(31,81,255,0.13);
+      text-decoration: none;
+      margin-bottom: 0.2rem;
+      transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+    .connect-card .connect-cta:hover {
+      background: #fff;
+      color: #1F51FF;
+      box-shadow: 0 4px 24px rgba(31,81,255,0.18);
+      transform: translateY(-2px) scale(1.04);
+    }
   </style>
 </head>
 <body>
@@ -580,35 +709,47 @@
 
     <section id="features" class="features-section">
       <div class="section-title" style="justify-content:center;"><i class="fa-solid fa-bolt"></i> What I Do</div>
-      <div class="features-row">
-        <div class="feature-card">
-          <div class="feature-icon"><i class="fa-solid fa-lightbulb"></i></div>
-          <div class="feature-title">Brand Innovation</div>
-          <div class="feature-desc">Building creative, data-driven brands that stand out in the market and connect with audiences.</div>
+      <div class="what-i-do-row">
+        <div class="what-i-do-card">
+          <div class="what-i-do-icon"><i class="fa-solid fa-lightbulb"></i></div>
+          <div class="what-i-do-content">
+            <div class="what-i-do-title">Brand Innovation</div>
+            <div class="what-i-do-desc">I help brands stand out by blending creativity with data-driven insights, building identities that connect and inspire.</div>
+          </div>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon"><i class="fa-solid fa-gears"></i></div>
-          <div class="feature-title">Tech Solutions</div>
-          <div class="feature-desc">Leveraging technology to solve real business problems and drive operational excellence.</div>
+        <div class="what-i-do-card">
+          <div class="what-i-do-icon"><i class="fa-solid fa-gears"></i></div>
+          <div class="what-i-do-content">
+            <div class="what-i-do-title">Tech Solutions</div>
+            <div class="what-i-do-desc">I leverage technology to solve real business problems, streamline operations, and drive sustainable growth.</div>
+          </div>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
-          <div class="feature-title">Growth Strategy</div>
-          <div class="feature-desc">Crafting and executing strategies for sustainable business growth and market expansion.</div>
+        <div class="what-i-do-card">
+          <div class="what-i-do-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="what-i-do-content">
+            <div class="what-i-do-title">Growth Strategy</div>
+            <div class="what-i-do-desc">I craft and execute strategies that fuel business expansion, market reach, and long-term impact.</div>
+          </div>
         </div>
       </div>
     </section>
     <svg class="wave-divider" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h1440v30c-120 20-360 40-720 40S120 50 0 30V0z" fill="#e0e7ff"/></svg>
 
     <section id="connect" class="connect-section">
-      <div class="section-card" id="connect-card">
-        <div class="section-title"><i class="fa-solid fa-handshake"></i> Let's Connect</div>
-        <p>
-          I love connecting with fellow innovators, entrepreneurs, and tech enthusiasts. Feel free to reach out or follow me on <a href="https://www.linkedin.com/in/navdeepparewa/" target="_blank" style="color:#0073b1;font-weight:600;">LinkedIn</a>.
-        </p>
+      <div class="connect-card" id="connect-card">
+        <div class="connect-title"><i class="fa-solid fa-handshake"></i> Let's Connect</div>
+        <div class="connect-message">
+          I love meeting fellow founders, innovators, and creators. Let's connect and build something amazing together!
+        </div>
+        <div class="connect-socials">
+          <a href="https://www.linkedin.com/in/navdeepparewa/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/navdeepparewa09" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:navdeepparewa@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <a class="connect-cta" href="mailto:navdeepparewa@gmail.com">Send me an Email</a>
       </div>
     </section>
-    <svg class="wave-divider" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h1440v30c-120 20-360 40-720 40S120 50 0 30V0z" fill="#e3f0ff"/></svg>
+    <svg class="wave-divider" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h1440v30c-120 20-360 40-720 40S120 50 0 30V0z" fill="#f8fcff"/></svg>
 
     <section id="contact" class="contact-section">
       <div class="section-card visible" id="contact-card">
