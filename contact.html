@@ -3,7 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Navdeep Parewa</title>
+  <title>Contact | Navdeep Parewa | Co-Founder at Filflo</title>
+  
+  <!-- Meta Description -->
+  <meta name="description" content="Get in touch with Navdeep Parewa, Co-Founder at Filflo. Contact for collaborations, partnerships, or business inquiries.">
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Contact | Navdeep Parewa | Co-Founder at Filflo">
+  <meta property="og:description" content="Get in touch with Navdeep Parewa, Co-Founder at Filflo. Contact for collaborations, partnerships, or business inquiries.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://navdeepparewa.github.io/contact.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face">
+  
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact | Navdeep Parewa | Co-Founder at Filflo">
+  <meta name="twitter:description" content="Get in touch with Navdeep Parewa, Co-Founder at Filflo. Contact for collaborations, partnerships, or business inquiries.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💼</text></svg>">
+  
+  <!-- Fonts and Icons -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
@@ -131,6 +152,103 @@
       color: #fff;
       transform: scale(1.12);
     }
+    
+    /* Contact Form Styles */
+    .contact-form {
+      margin: 1.5rem 0;
+      width: 100%;
+      max-width: 400px;
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 2px solid #e3f0ff;
+      border-radius: 0.8rem;
+      font-size: 1rem;
+      font-family: inherit;
+      background: #fff;
+      color: #333;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      box-sizing: border-box;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #1F51FF;
+      box-shadow: 0 0 0 3px rgba(31,81,255,0.1);
+    }
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    .contact-form-btn {
+      width: 100%;
+      background: linear-gradient(90deg, #1F51FF 0%, #5a8fff 100%);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 0.8rem;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .contact-form-btn:hover {
+      background: linear-gradient(90deg, #5a8fff 0%, #1F51FF 100%);
+      transform: translateY(-2px);
+    }
+    .contact-divider {
+      text-align: center;
+      margin: 1.5rem 0;
+      position: relative;
+    }
+    .contact-divider::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: #e3f0ff;
+    }
+    .contact-divider span {
+      background: #1F51FF;
+      color: #fff;
+      padding: 0 1rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border-radius: 1rem;
+    }
+    .contact-info {
+      margin: 1rem 0;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      .contact-card {
+        padding: 2rem 1rem;
+        margin: 2rem 1rem;
+      }
+      .contact-form {
+        max-width: 100%;
+      }
+      nav {
+        gap: 0.8rem;
+        flex-wrap: wrap;
+      }
+      nav a {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.8rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -149,14 +267,44 @@
   </header>
   <main>
     <div class="contact-card">
-      <h1>Contact</h1>
+      <h1><i class="fa-solid fa-envelope"></i> Get In Touch</h1>
       <p>
-        <strong>Email:</strong> <a href="mailto:navdeepparewa@gmail.com">navdeepparewa@gmail.com</a><br>
-        <strong>Company:</strong> <a href="https://filflo.in" target="_blank">filflo.in</a>
+        Ready to collaborate, discuss opportunities, or have a question? I'd love to hear from you!
       </p>
+      
+      <!-- Contact Form -->
+      <form class="contact-form" action="mailto:navdeepparewa@gmail.com" method="post" enctype="text/plain">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <input type="text" name="subject" placeholder="Subject" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="contact-form-btn">
+          <i class="fa-solid fa-paper-plane"></i> Send Message
+        </button>
+      </form>
+      
+      <div class="contact-divider">
+        <span>or</span>
+      </div>
+      
+      <div class="contact-info">
+        <p>
+          <strong>Email:</strong> <a href="mailto:navdeepparewa@gmail.com">navdeepparewa@gmail.com</a><br>
+          <strong>Company:</strong> <a href="https://filflo.in" target="_blank">filflo.in</a>
+        </p>
+      </div>
+      
       <div class="contact-socials">
         <a href="https://www.linkedin.com/in/navdeepparewa/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.instagram.com/navdeepparewa/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/navdeepparewa09" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
       </div>
     </div>
   </main>
