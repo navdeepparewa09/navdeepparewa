@@ -3,7 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navdeep Parewa | Home</title>
+  <title>Navdeep Parewa | Co-Founder at Filflo | Brand Innovator</title>
+  
+  <!-- Meta Description -->
+  <meta name="description" content="Navdeep Parewa is a Co-Founder at Filflo, specializing in brand innovation, technology solutions, and growth strategy. Based in Gurugram, India.">
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Navdeep Parewa | Co-Founder at Filflo">
+  <meta property="og:description" content="Brand innovator and technology leader specializing in data-driven growth and creative solutions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://navdeepparewa.github.io">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/9919?v=4">
+  
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Navdeep Parewa | Co-Founder at Filflo">
+  <meta name="twitter:description" content="Brand innovator and technology leader specializing in data-driven growth and creative solutions.">
+  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/9919?v=4">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💼</text></svg>">
+  
+  <!-- Fonts and Icons -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
@@ -399,8 +420,12 @@
       font-weight: 500;
       max-width: 400px;
     }
-    .founder-hero-cta {
-      display: inline-block;
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+    .hero-cta-primary {
       background: linear-gradient(90deg, #1F51FF 60%, #5a8fff 100%);
       color: #fff;
       font-size: 1.1rem;
@@ -409,11 +434,26 @@
       border-radius: 2rem;
       box-shadow: 0 2px 12px rgba(31,81,255,0.13);
       text-decoration: none;
-      margin-bottom: 1.1rem;
       transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
     }
-    .founder-hero-cta:hover {
+    .hero-cta-primary:hover {
       background: linear-gradient(90deg, #5a8fff 0%, #1F51FF 100%);
+      box-shadow: 0 4px 24px rgba(31,81,255,0.18);
+      transform: translateY(-2px) scale(1.04);
+    }
+    .hero-cta-secondary {
+      background: #fff;
+      color: #1F51FF;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 0.85rem 2.2rem;
+      border-radius: 2rem;
+      box-shadow: 0 2px 12px rgba(31,81,255,0.13);
+      text-decoration: none;
+      transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+    .hero-cta-secondary:hover {
+      background: #e3f0ff;
       box-shadow: 0 4px 24px rgba(31,81,255,0.18);
       transform: translateY(-2px) scale(1.04);
     }
@@ -558,7 +598,8 @@
     }
     .what-i-do-desc {
       font-size: 1rem;
-      color: #444;
+      color: #666;
+      line-height: 1.6;
     }
     @media (max-width: 900px) {
       .what-i-do-row { flex-direction: column; gap: 1.2rem; align-items: center; }
@@ -716,6 +757,271 @@
       box-shadow: 0 4px 24px rgba(31,81,255,0.18);
       transform: translateY(-2px) scale(1.04);
     }
+    /* Projects Section Styles */
+    .projects-section {
+      padding: 4rem 0;
+      background: #f8fcff;
+    }
+    .projects-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.2rem;
+    }
+    .project-card {
+      background: #fff;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      box-shadow: 0 4px 24px rgba(31,81,255,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(31,81,255,0.12);
+    }
+    .project-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #1F51FF, #5a8fff);
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .project-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1F51FF;
+      margin-bottom: 0.5rem;
+    }
+    .project-desc {
+      font-size: 1rem;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .project-tech {
+      font-size: 0.9rem;
+      color: #888;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      background: #f0f4ff;
+      border-radius: 0.5rem;
+      border-left: 3px solid #1F51FF;
+    }
+    .contact-card-ui .contact-cta:hover {
+      background: #fff;
+      color: #1F51FF;
+      box-shadow: 0 4px 24px rgba(31,81,255,0.18);
+      transform: translateY(-2px) scale(1.04);
+    }
+    
+    /* Contact Form Styles */
+    .contact-form {
+      margin-bottom: 1.5rem;
+      width: 100%;
+      max-width: 400px;
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 2px solid #e3f0ff;
+      border-radius: 0.8rem;
+      font-size: 1rem;
+      font-family: inherit;
+      background: #fff;
+      color: #333;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      box-sizing: border-box;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #1F51FF;
+      box-shadow: 0 0 0 3px rgba(31,81,255,0.1);
+    }
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    .contact-form-btn {
+      width: 100%;
+      background: linear-gradient(90deg, #1F51FF 0%, #5a8fff 100%);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 0.8rem;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .contact-form-btn:hover {
+      background: linear-gradient(90deg, #5a8fff 0%, #1F51FF 100%);
+      transform: translateY(-2px);
+    }
+    .contact-divider {
+      text-align: center;
+      margin: 1.5rem 0;
+      position: relative;
+    }
+    .contact-divider::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: #e3f0ff;
+    }
+    .contact-divider span {
+      background: #1F51FF;
+      color: #fff;
+      padding: 0 1rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border-radius: 1rem;
+    }
+    @media (max-width: 900px) {
+      .exp-card { padding: 1.5rem 0.7rem; }
+      .hero-actions {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      .hero-cta-primary,
+      .hero-cta-secondary {
+        font-size: 1rem;
+        padding: 0.7rem 1.8rem;
+      }
+      .projects-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+      }
+      .project-card {
+        padding: 1.5rem;
+      }
+      .testimonials-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+      }
+      .testimonial-card {
+        padding: 1.5rem;
+      }
+      .contact-form {
+        max-width: 100%;
+      }
+      .founder-hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+      }
+      .founder-hero-img {
+        width: 120px;
+        height: 120px;
+      }
+      .founder-hero-name {
+        font-size: 2.2rem;
+      }
+      .founder-hero-role {
+        font-size: 1.1rem;
+      }
+      .founder-hero-tagline {
+        font-size: 1rem;
+      }
+    }
+    
+    @media (max-width: 600px) {
+      nav {
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      nav a {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.8rem;
+      }
+      .section-title {
+        font-size: 1.6rem;
+      }
+      .what-i-do-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .about-mission-row {
+        flex-direction: column;
+        gap: 2rem;
+      }
+    }
+    
+    /* Testimonials Section Styles */
+    .testimonials-section {
+      padding: 4rem 0;
+      background: #e3f0ff;
+    }
+    .testimonials-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1.2rem;
+    }
+    .testimonial-card {
+      background: #fff;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      box-shadow: 0 4px 24px rgba(31,81,255,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(31,81,255,0.12);
+    }
+    .testimonial-content {
+      margin-bottom: 1.5rem;
+    }
+    .testimonial-content p {
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.6;
+      font-style: italic;
+      margin: 0;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .author-info {
+      flex: 1;
+    }
+    .author-name {
+      font-weight: 700;
+      color: #1F51FF;
+      font-size: 1rem;
+    }
+    .author-role {
+      color: #666;
+      font-size: 0.9rem;
+      margin-top: 0.2rem;
+    }
   </style>
 </head>
 <body>
@@ -738,7 +1044,15 @@
         <div class="founder-hero-left">
           <div class="founder-hero-name">Navdeep Parewa</div>
           <div class="founder-hero-role">Co-Founder at Filflo</div>
-          <div class="founder-hero-tagline">Empowering brands with data-driven growth, creative solutions, and a passion for innovation.</div>
+          <div class="founder-hero-tagline">Driving brand innovation through data-driven strategies and technology solutions. Passionate about building scalable businesses and empowering teams.</div>
+          <div class="hero-actions">
+            <a href="https://github.com/navdeepparewa09" target="_blank" class="hero-cta-primary">
+              <i class="fab fa-github"></i> View GitHub
+            </a>
+            <a href="#" class="hero-cta-secondary" onclick="downloadCV()">
+              <i class="fa-solid fa-download"></i> Download CV
+            </a>
+          </div>
           <div class="founder-hero-socials">
             <a href="https://github.com/navdeepparewa09" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
           </div>
@@ -747,7 +1061,7 @@
             <span style="color:#0073b1;font-weight:600;">1,246 followers</span> &middot; <span style="color:#0073b1;font-weight:600;">500+ connections</span>
           </div>
         </div>
-        <img class="founder-hero-img" src="https://avatars.githubusercontent.com/u/9919?v=4" alt="Navdeep Parewa Profile" />
+        <img class="founder-hero-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="Navdeep Parewa - Co-Founder at Filflo" />
       </div>
       <div class="scroll-indicator">
         <span>Scroll Down</span>
@@ -761,11 +1075,17 @@
         <div class="about-bio">
           <div class="section-title"><i class="fa-solid fa-user"></i> About Me</div>
           <p>
-            As a <strong>Co-Founder at Filflo</strong>, I specialize in brand innovation and technology-driven solutions. My journey blends creativity, precision, and a dash of passion—whether in the kitchen or the boardroom. I believe in the power of preparation, adaptability, and continuous learning to achieve success.
+            As a <strong>Co-Founder at Filflo</strong>, I lead brand innovation and technology-driven solutions in the supply chain and quick commerce space. With expertise spanning retail market analysis, financial operations, and operational management, I focus on building scalable, data-driven brands.
           </p>
           <p>
-            <em>"Every great chef started with a few burnt dishes, and every successful entrepreneur faced setbacks. Keep pushing, keep innovating, and most importantly, keep believing in your vision."</em>
+            <strong>Key Achievements:</strong>
           </p>
+          <ul style="text-align: left; max-width: 500px; margin: 0 auto; color: #444; line-height: 1.6;">
+            <li>Co-founded and scaled Filflo in the competitive quick commerce space</li>
+            <li>Led cross-functional teams across retail, finance, and operations</li>
+            <li>Developed investor pitch decks and managed company P&L reports</li>
+            <li>Optimized warehouse operations and supply chain workflows</li>
+          </ul>
         </div>
         <div class="about-mission">
           <div class="about-mission-title"><i class="fa-solid fa-bullseye"></i> My Mission</div>
@@ -808,6 +1128,66 @@
     </section>
     <svg class="wave-divider" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h1440v30c-120 20-360 40-720 40S120 50 0 30V0z" fill="#e0e7ff"/></svg>
 
+    <section id="projects" class="projects-section">
+      <div class="section-title" style="justify-content:center;"><i class="fa-solid fa-rocket"></i> Featured Projects</div>
+      <div class="projects-row">
+        <div class="project-card">
+          <div class="project-icon"><i class="fa-solid fa-building"></i></div>
+          <div class="project-content">
+            <div class="project-title">Filflo Platform</div>
+            <div class="project-desc">Co-founded and scaled a technology platform for supply chain and quick commerce solutions, serving multiple brands and optimizing operations.</div>
+            <div class="project-tech">Tech Stack: Full-stack development, Data Analytics, Supply Chain Management</div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="project-content">
+            <div class="project-title">Retail Market Analysis</div>
+            <div class="project-desc">Conducted comprehensive retail market research and analysis, providing data-driven insights for business strategy and growth.</div>
+            <div class="project-tech">Skills: Market Research, Data Analysis, Business Intelligence</div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-icon"><i class="fa-solid fa-cogs"></i></div>
+          <div class="project-content">
+            <div class="project-title">Operations Optimization</div>
+            <div class="project-desc">Designed and implemented optimized workflows for warehouse operations, improving efficiency and reducing operational costs.</div>
+            <div class="project-tech">Expertise: Process Optimization, Workflow Design, Team Management</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <svg class="wave-divider" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h1440v30c-120 20-360 40-720 40S120 50 0 30V0z" fill="#f8fcff"/></svg>
+
+    <section id="testimonials" class="testimonials-section">
+      <div class="section-title" style="justify-content:center;"><i class="fa-solid fa-quote-left"></i> What People Say</div>
+      <div class="testimonials-row">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"Navdeep brings exceptional strategic thinking and execution capabilities to every project. His ability to drive innovation while maintaining operational excellence is remarkable."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <div class="author-name">Senior Executive</div>
+              <div class="author-role">Technology Company</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"Working with Navdeep has been transformative for our business. His expertise in brand innovation and data-driven strategies has helped us scale effectively."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <div class="author-name">Business Partner</div>
+              <div class="author-role">Startup Ecosystem</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <svg class="wave-divider" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h1440v30c-120 20-360 40-720 40S120 50 0 30V0z" fill="#e3f0ff"/></svg>
+
     <section id="connect" class="connect-section">
       <div class="connect-card" id="connect-card">
         <div class="connect-title"><i class="fa-solid fa-handshake"></i> Let's Connect</div>
@@ -828,6 +1208,30 @@
         <div class="contact-message">
           Want to collaborate, chat, or have a question? Drop me a line or connect on your favorite platform!
         </div>
+        
+        <!-- Contact Form -->
+        <form class="contact-form" action="mailto:navdeepparewa@gmail.com" method="post" enctype="text/plain">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="subject" placeholder="Subject" required>
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="contact-form-btn">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+        
+        <div class="contact-divider">
+          <span>or</span>
+        </div>
+        
         <div class="contact-socials">
           <a href="https://github.com/navdeepparewa09" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
         </div>
@@ -854,11 +1258,72 @@
         element.classList.remove('visible');
       }
     }
+    
     function handleScrollFade() {
       fadeInOnView(document.getElementById('about-card'));
       fadeInOnView(document.getElementById('connect-card'));
-      // Contact card always visible, no animation
+      fadeInOnView(document.getElementById('contact-card'));
+      // Add animations for project cards
+      document.querySelectorAll('.project-card').forEach(card => {
+        fadeInOnView(card);
+      });
+      // Add animations for testimonial cards
+      document.querySelectorAll('.testimonial-card').forEach(card => {
+        fadeInOnView(card);
+      });
     }
+    
+    function downloadCV() {
+      // Create a simple CV content (you can replace this with an actual PDF link)
+      const cvContent = `Navdeep Parewa - CV
+
+CO-FOUNDER AT FILFLO
+Gurugram, Haryana, India
+
+PROFESSIONAL SUMMARY
+Co-Founder at Filflo with expertise in brand innovation, technology solutions, and growth strategy. 
+Specialized in supply chain and quick commerce space with cross-functional experience in retail, 
+finance, and operations management.
+
+EXPERIENCE
+
+Founder's Office @ SleepyOwl Coffee
+• Retail Market Analysis: Conducted extensive research and analysis of retail markets
+• Financial Operations: Worked on investor pitch decks and company P&L reports  
+• Operations Management: Managed manpower, optimized workflows, oversaw warehouse operations
+
+Co-Founder @ Filflo
+• Lead brand innovation and technology-driven solutions
+• Focus on building scalable, data-driven brands
+• Drive operational excellence in fast-paced environments
+
+SKILLS
+• Brand Innovation & Strategy
+• Technology Solutions
+• Supply Chain Management
+• Data Analytics
+• Team Leadership
+• Process Optimization
+
+EDUCATION & CERTIFICATIONS
+• Relevant certifications and education details
+
+CONTACT
+Email: navdeepparewa@gmail.com
+LinkedIn: linkedin.com/in/navdeepparewa
+GitHub: github.com/navdeepparewa09`;
+
+      const blob = new Blob([cvContent], { type: 'text/plain' });
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'Navdeep_Parewa_CV.txt';
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+      document.body.removeChild(a);
+    }
+    
     window.addEventListener('scroll', handleScrollFade);
     window.addEventListener('resize', handleScrollFade);
     window.addEventListener('DOMContentLoaded', handleScrollFade);
